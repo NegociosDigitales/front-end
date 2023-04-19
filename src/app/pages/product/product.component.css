@@ -1,0 +1,45 @@
+:host {
+    display: block;
+    background-color:#ECF2FF;
+    width: 200px;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border: 1px solid #E3DFFD;
+    box-shadow: 1px 1px 10px #975C8D;
+}
+
+#detalles {
+    float: right;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #EBC7E8;
+    border: none;
+    border-radius: 12px;
+}
+
+#detalles:active, #bot:active {
+    background-color: #C1AEFC;
+    box-shadow: 0 5px #655DBB;
+    transform: translateY(4px);
+}
+
+#compartir{
+    border: none;
+    border-radius: 12px;
+    background-color: #D2DAFF;
+}
+
+a{
+    color: #D09CFA;
+}
+
+#comprar{
+    border: none;
+    border-radius: 12px;
+    background-color: #BFACE2;
+}

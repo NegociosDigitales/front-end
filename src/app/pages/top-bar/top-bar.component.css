@@ -1,0 +1,31 @@
+:host{
+    background: linear-gradient(95deg,#E5D1FA 0%,#E3DFFD 32%, #ECF2FF 40%);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    height: 90px;
+    
+  }
+
+
+button{
+  color: white;
+  background-color:#E5D1FA;
+  height: 60px;
+  width: 80px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+div{
+  vertical-align: baseline;
+}
+
+i{
+  width: 20px;
+  height: 20px;
+}
+
+h1{
+  font-family: Betty Lavea;
+  color:#BFACE2;
+}

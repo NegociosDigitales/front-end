@@ -1,0 +1,52 @@
+h1{
+
+    color:#BFACE2;
+  }
+  h2{
+    background-color: #E3DFFD;
+    height: 25px;
+    border-color: gray;
+    border-radius: 5px;
+  }
+
+.contenedor-flexbox{
+    border-radius: 20px;
+    display: flex;
+     justify-content: space-between; 
+     align-items: center;
+     padding-left: 5px;
+}
+
+#forma{
+    width: 380px;
+}
+label{
+    align-items: center;
+}
+button{
+    font-family: harmony;
+    font-size: 110%;
+    color:#645CBB;
+    width:105px;
+    height: 40px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    background-color: #BFACE2;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #D9ACF5;
+    color:#A555EC;
+}
+p-table{
+    padding: 20px;
+    padding-bottom: 110px;
+}
+#edit{
+    width: 40px;
+}
+#espacio{
+    width: 10px;
+}

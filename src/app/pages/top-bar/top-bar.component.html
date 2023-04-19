@@ -1,0 +1,40 @@
+
+  <div class="row">
+    <h1>Bet'pa </h1>
+  </div>
+<p-menubar [model]="items">
+  <ng-template pTemplate="Home">
+  </ng-template>
+  
+  <ng-template pTemplate="Carrito">
+  </ng-template>
+
+  <ng-template pTemplate="Productos">
+  </ng-template>
+
+  <ng-template pTemplate="Clientes">
+  </ng-template>
+
+  <ng-template pTemplate="Login">
+  </ng-template>
+
+  
+  <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+      <button (click)="auth.logout({ logoutParams: { returnTo: document.location.origin } })">
+        Cerrar Sesión
+      </button>
+  </ng-container>
+    
+    
+  <ng-template #loggedOut>
+      <button label="Ingresar" (click)="auth.loginWithRedirect()" style="color:white">Ingresar</button>
+  </ng-template>
+ 
+  
+</p-menubar>
+
+
+
+  
+ 
+  

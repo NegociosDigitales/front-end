@@ -1,0 +1,27 @@
+<br>
+<button id="detalles" type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Mostrar"><i class="pi pi-plus-circle"></i>
+</button>
+<p-card>
+    <ng-template pTemplate="content">
+        <h3>  
+            <a [title]="'Detalles' + producto.name" [routerLink]="['/products', producto.id]">
+                {{ producto.name }}
+            </a>
+        </h3>
+        <h4>Descripcion</h4>
+        <p *ngIf="producto.description"> {{ producto.description }}</p>
+        <button id="compartir" type="button" (click)="compartir()">Compartir<i class="pi pi-share-alt"></i></button>
+        <app-product-alerts  [producto]="producto" (click)="onNotify()">
+        </app-product-alerts>
+        <p-toast> </p-toast>
+    </ng-template>
+    <p-dialog header="{{producto.name}}" [(visible)]="display">
+        Precio: ${{producto.price}}
+        <br>
+        <br>
+        <img src="./assets/pics/{{producto.images}}" width="100px" height="100px" alt="Sin imagen">
+        <br>
+        <br>
+        <button id="comprar" type="button" (click)="addToCart(producto)">Comprar</button>
+    </p-dialog>
+</p-card>

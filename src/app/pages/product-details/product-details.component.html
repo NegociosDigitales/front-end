@@ -1,0 +1,37 @@
+<div class="content">
+  <div class="contenedor-flexbox">
+    <div id="back"><a href="/productos">←Regresar</a></div>
+    <div id="titulo"><h1>Detalles del producto</h1></div>
+  </div>
+    
+ 
+    <div *ngIf="product"> 
+      <br> 
+          <div class="card" align="center">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Descripcion</th>
+                </tr>
+              </thead>
+            <tbody>
+              <tr>
+                <th>{{product.name}}</th>
+                <th>{{product.price | currency }}</th>
+                <th>{{product.description }}</th>
+              </tr>
+                
+            
+            </tbody>
+            </table>
+          </div>
+      <br>
+          <img src="./assets/pics/{{product.images}}" width="150px" height="150px" alt="Sin imagen">
+      <br>
+      <br>
+          <button id="boton" type="button" (click)="addToCart(product)">Agregar al carrito</button>
+            <p-toast></p-toast> 
+    </div> 
+ </div>

@@ -1,0 +1,74 @@
+<div>
+    <div>
+        <h1>Gestión de clientes</h1>
+    </div>
+    <div class="contenedor-flexbox">
+        <div class="contenedor-flexbox">
+            <div  class="contenedor-flexbox">
+                <div class="contenedor-flexbox">
+                    <form #ClienteForm="ngForm">
+                        <h2>Insercción</h2>
+                        <div id="forma" class="contenedor-flexbox" >
+                            <div class="form-group"  >
+                                <label>ID </label>
+                                <br>
+                                <input type="number" name="Identificador" [(ngModel)]="cliente.id" class="form-control" autofocus placeholder="ID cliente">
+                            </div>
+    
+                            <div class="form-group" >
+                                <label>Nombre </label>
+                                <br>
+                                <input type="text" name="Nombre-Producto" [(ngModel)]="cliente.name" class="form-control" autofocus placeholder="Nombre cliente">
+                            </div> 
+                        </div>
+    
+                        <div class="contenedor-flexbox" >    
+                            <div class="form-group">
+                                <label>Tipo </label>
+                                <br>
+                                <input type="text" name="Precio"  [(ngModel)]="cliente.type" class="form-control" autofocus placeholder="Tipo de cliente" >
+                            </div>
+                            <div class="form-group" >
+                                <button class="btn btn-success btn-lg btn-block" (click)="edit ? updateCliente(cliente.id)  : saveNewCliente(); ClienteForm.resetForm(); ">
+                                    Guardar
+                                </button> 
+                                <p-toast></p-toast>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <p-divider class="contenedor-flexbox" layout="vertical"></p-divider>
+            </div>
+
+        </div>
+
+        <div class="contenedor-flexbox">
+            <p-table id="izq" [value]="clientes">
+                <ng-template   pTemplate="header">
+                    <tr>
+                        <th>Identificador</th>
+                        <th>Nombre</th>
+                        <th>Gestión</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-cliente>
+                    <tr>
+                        <td>{{cliente.id}}</td>
+                        <td>{{cliente.name}}</td>
+                        <td>
+                            <div class="contenedor-flexbox">
+                                <div><button (click)="fillData(cliente)" id="edit"><i class="pi pi-file-edit"></i></button></div>
+                                <div id="espacio"></div>
+                                <div><button id="edit" (click)="deleteCliente(cliente.id)"><i class="pi pi-delete-left"></i></button></div>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+    
+
+    
+
+</div>

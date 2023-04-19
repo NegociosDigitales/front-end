@@ -1,0 +1,30 @@
+h1 {
+    font-size: 1.7em;
+    font-family: Southmore;
+  }
+  
+  .contenido {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (min-width:500px){
+    .contenido{
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+  @media (max-width:1000px){
+    .contenido{
+      padding-left: 6%;
+      padding-right: 6%;
+    }
+    @media (min-width: 100px){
+      .contenido{
+        padding-left: 21%;
+      }
+    }
+  }
+  
+  .product {
+    display: inline-flex;
+  }

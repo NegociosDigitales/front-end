@@ -1,0 +1,57 @@
+@media (min-width:200px){
+    .content{
+      padding: 4%;
+    }
+  }
+  @media (max-width:100px){
+    .content{
+      padding: 3%;
+    }
+  }
+   h1{
+    font-family: Southmore;
+    color: #E5D1FA;
+
+   }
+
+   tr,th, table{
+    border-collapse: collapse;
+    border-color:#EBC7E6 ;
+    font-size: medium;
+    border: 1px solid;
+    margin: 2px;
+   }
+
+   #boton{
+    border: none;
+    border-radius: 12px;
+    background-color: #E3DFFD;
+    width: 200px;
+    height: 50px;
+    font-size: larger;
+   }
+
+  .contenedor-flexbox{
+    border-radius: 20px;
+    display: flex;
+     justify-content: space-between; 
+     align-items: center;
+  }
+
+  #titulo {
+    width:650px;
+    align-items: center;
+    padding-right: 350px;
+  }
+ 
+  a{ 
+    background-color: #E5D1FA;
+    border-radius: 5px;
+    color: #A084DC;
+    border-color: #A084DC;
+    border: 2px;
+    width:15px;
+    height: 15px;
+    padding: 10px;
+    
+  }

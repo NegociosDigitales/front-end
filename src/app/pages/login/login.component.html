@@ -1,0 +1,34 @@
+<div id="contenedor">
+    <div id="central">
+        <div id="login">
+            <div class="titulo">
+                Login
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="loginform">
+               
+                <div>
+                    <input formControlName="username" type="text" name="usuario" placeholder="Usuario" required>
+                </div>
+                
+                <div>
+                    <input formControlName="password" type="password" placeholder="Contraseña" name="password" required>
+                </div>
+
+                <div>
+                    <button  align="center" type="submit" title="Ingresar" name="Ingresar">Ingresar<i  class="material-icons">login</i></button>
+                </div>
+                <br>
+                <div id="captcha">
+                    <ngx-recaptcha2 #captchaElem
+                      [useGlobalDomain]="false"
+                      [siteKey]="siteKey"
+                      (success)="handleSuccess($event)"
+                      formControlName="recaptcha">
+                    </ngx-recaptcha2>
+                </div>
+            </form>
+         
+        </div>
+        
+    </div>
+</div>

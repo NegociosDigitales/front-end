@@ -1,0 +1,9 @@
+<h1>Catalogo de Productos</h1>
+<br>
+
+<div class="contenido">
+  <div *ngFor="let producto of productos">
+    <div class="product">  <app-product [producto]="producto"></app-product>
+    </div>
+  </div>
+</div>

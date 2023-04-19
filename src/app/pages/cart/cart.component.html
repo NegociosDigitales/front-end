@@ -1,0 +1,26 @@
+ <script src="https://js.stripe.com/v3/"></script>
+<div class="contenedor-flexbox">
+  <div><a id="back" href="/productos">Agregar productos</a></div>
+  <div id="titulo"><h1>Carrito</h1></div>
+</div>
+<p>
+    <a routerLink="/shipping">Precios de envío</a>
+</p>
+  <div id="cart" class="cart-item" *ngFor="let item of items">
+      <span>{{ item.name}}</span>
+      <span>{{ item.price | currency }}</span>
+      <span>{{ item.quantity }}</span> 
+  </div>
+  <div *ngIf="total > 0" class="cart-item">
+    <span style="text-align: right; color:#A084DC">Total = {{total | currency}}</span>
+    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+    <p-toast> </p-toast>
+  </div>
+
+
+ 
+
+ 
+  
+
+

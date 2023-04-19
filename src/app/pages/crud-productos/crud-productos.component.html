@@ -1,0 +1,97 @@
+<div>
+    <div>
+        <h1>Gestión de productos</h1>
+    </div>
+
+
+    <div class="contenedor-flexbox">
+        <div  class="contenedor-flexbox">
+            <div class="contenedor-flexbox">
+                <form #ProductoForm="ngForm">
+                    <h2>Insercción</h2>
+                    <div id="forma" class="contenedor-flexbox" >
+                        <div class="form-group"  >
+                            <label>ID </label>
+                            <br>
+                            <input type="text" name="Identificador" [(ngModel)]="producto.id" class="form-control" autofocus placeholder="ID producto">
+                        </div>
+
+                        <div class="form-group" >
+                            <label>Nombre </label>
+                            <br>
+                            <input type="text" name="Nombre-Producto" [(ngModel)]="producto.name" class="form-control" autofocus placeholder="Nombre producto">
+                        </div> 
+                    </div>
+
+                    <div class="contenedor-flexbox" >    
+                        <div class="form-group">
+                            <label>Precio </label>
+                            <br>
+                            <input type="number" name="Precio"  [(ngModel)]="producto.price" class="form-control" >
+                        </div>
+
+                        <div class="form-group" >
+                            <label>Descripción </label>
+                            <br>
+                            <input type="text" name="Descripcion" [(ngModel)]="producto.description" class="form-control"  autofocus placeholder="Descripción producto" >
+                        </div>
+                    </div>
+                        
+                    <div  class="contenedor-flexbox" >
+                        <div class="form-group" >
+                            <label>Stock en bodega</label>
+                            <br>
+                            <input type="number" name="Stock" [(ngModel)]="producto.stock" class="form-control" autofocus >
+                        </div>
+    
+                        <div  class="form-group" >
+                            <label>Imagen de referencia </label>
+                            <br>
+                            <input type="text" name="Imagen" [(ngModel)]="producto.images" class="form-control"  autofocus placeholder="Imagen producto">
+                        </div>
+                    </div>
+
+                    
+                    
+                    <div class="form-group" >
+                        <button class="btn btn-success btn-lg btn-block" (click)="edit ? updateProducto(producto.id):  saveNewProducto(); ProductoForm.resetForm(); ">
+                            Guardar
+                        </button> 
+                        <p-toast></p-toast>
+                    </div>
+                </form>
+            </div>
+            <p-divider class="contenedor-flexbox" layout="vertical"></p-divider>
+        </div>
+        <div class="contenedor-flexbox">
+            <p-table [value]="productos">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Identificador</th>
+                        <th>Nombre</th>
+                        <th>Gestión</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-producto>
+                    <tr>
+                        <td>{{producto.id}}</td>
+                        <td>{{producto.name}}</td>
+                        <td>
+                            <div class="contenedor-flexbox">
+                                <div><button (click)="fillData(producto)" id="edit"><i class="pi pi-file-edit"></i></button></div>
+                                <div id="espacio"></div>
+                                <div><button id="edit" (click)="deleteProducto(producto.id)"><i class="pi pi-delete-left"></i></button></div>
+                            </div>
+                        
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        
+        
+        
+        
+    </div>
+
+</div>
